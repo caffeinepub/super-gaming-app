@@ -1,0 +1,23 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-debug-and-fix-the-keyboard-direction-controls-wasd-and-arrow-keys-to-properly-control-player-movement-in-the-3d-game-scene",
+      "featureTitle": "Debug and fix the keyboard direction controls (WASD and arrow keys) to properly control player movement in the 3D game scene",
+      "files": [
+        "frontend/src/hooks/useGameControls.ts"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-6"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

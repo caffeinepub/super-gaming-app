@@ -1,0 +1,17 @@
+{
+  "frontend/src/App.tsx": "Main application component with TanStack Router setup, defining routes for game, leaderboard, and wrapping all routes with GameLayout component.",
+  "frontend/src/components/GameLayout.tsx": "Layout wrapper component that applies cyberpunk-themed gradient background with game background asset overlay and grid pattern effects.",
+  "frontend/src/pages/GamePage.tsx": "Main game page orchestrating the 3D game experience with menu, playing, paused, and game over states, HUD overlay, score tracking, and power-up management.",
+  "frontend/src/pages/LeaderboardPage.tsx": "Dedicated leaderboard page displaying top scores with header, navigation back to game, and footer with attribution.",
+  "frontend/src/components/Game3DScene.tsx": "3D game scene component using React Three Fiber with player sphere, collectible orbs, moving obstacles, collision detection, and game loop logic.",
+  "frontend/src/components/GameControls.tsx": "Controls overlay component displaying keyboard control instructions with WASD/arrow keys and ESC for pause in a styled panel.",
+  "frontend/src/components/PowerUpIndicator.tsx": "HUD component displaying active power-up status with icon, animated glow effects, and invincibility indicator.",
+  "frontend/src/components/Leaderboard.tsx": "Leaderboard component fetching and displaying ranked scores with trophy icons for top 3 players, player principals, and formatted scores.",
+  "frontend/src/hooks/useQueries.ts": "React Query hook for fetching all scores in descending order from the backend canister.",
+  "frontend/src/hooks/useGameControls.ts": "Custom hook managing keyboard input state for WASD, arrow keys, and space bar with proper event listener cleanup and state updates that avoid stale closures.",
+  "frontend/src/hooks/useGameEngine.ts": "Game engine hook providing collision detection, orb spawning, and obstacle spawning logic for 3D game mechanics.",
+  "frontend/src/hooks/useLeaderboard.ts": "Hook wrapping score fetching query with convenient interface for leaderboard data, loading state, and refresh capability.",
+  "frontend/src/hooks/useScoreSubmission.ts": "Hook managing score submission to backend with mutation, loading state, and automatic leaderboard invalidation on success.",
+  "frontend/src/index.css": "Global styles with OKLCH color system defining neon cyan, magenta, and yellow colors for cyberpunk theme with glow effects and grid pattern utilities.",
+  "frontend/tailwind.config.js": "Tailwind configuration extended with neon color palette, custom shadows, cyberpunk-inspired design tokens, and custom font families."
+}

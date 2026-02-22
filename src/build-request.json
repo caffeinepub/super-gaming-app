@@ -1,0 +1,41 @@
+{
+  "kind": "build_request",
+  "title": "Fix non-functional direction button controls",
+  "priority": "high",
+  "requirements": [
+    {
+      "id": "REQ-6",
+      "text": "Debug and fix the keyboard direction controls (WASD and arrow keys) to properly control player movement in the 3D game scene",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-user-latest"
+        ],
+        "quotes": [
+          "the direction buttons don't work"
+        ]
+      },
+      "acceptanceCriteria": [
+        "WASD keys move the player sphere in the corresponding directions (W=forward, A=left, S=backward, D=right)",
+        "Arrow keys move the player sphere in the corresponding directions",
+        "Player movement responds immediately to key press without lag",
+        "Player movement stops when keys are released",
+        "Movement works consistently during gameplay without requiring page refresh"
+      ]
+    }
+  ],
+  "constraints": [
+    "Do not change the existing 3D scene structure or game physics",
+    "Maintain the current visual theme and styling",
+    "Preserve the leaderboard functionality and backend integration"
+  ],
+  "nonGoals": [
+    "Adding new control schemes beyond keyboard",
+    "Modifying the game's collision detection or scoring logic",
+    "Changing the visual appearance of the controls UI"
+  ],
+  "imageRequirements": {
+    "required": [],
+    "edits": []
+  }
+}

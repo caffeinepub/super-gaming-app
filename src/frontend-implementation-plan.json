@@ -1,0 +1,35 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Fix non-functional direction button controls",
+  "requirements": [
+    {
+      "id": "REQ-6",
+      "summary": "Debug and fix keyboard direction controls (WASD and arrow keys) to properly control player movement in the 3D game scene",
+      "acceptanceCriteria": [
+        "WASD keys move the player sphere in the corresponding directions (W=forward, A=left, S=backward, D=right)",
+        "Arrow keys move the player sphere in the corresponding directions",
+        "Player movement responds immediately to key press without lag",
+        "Player movement stops when keys are released",
+        "Movement works consistently during gameplay without requiring page refresh"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/hooks/useGameControls.ts",
+          "operation": "modify",
+          "description": "Review and fix the keyboard event listener implementation to ensure proper state tracking for WASD and arrow keys. Verify that keydown events set the corresponding key state to true and keyup events set it to false. Ensure event listeners are properly attached to the window or document and cleaned up on unmount. Check for potential event.preventDefault() issues that might block default browser behavior. Ensure the hook returns the current pressed state for all direction keys (W, A, S, D, ArrowUp, ArrowLeft, ArrowDown, ArrowRight)."
+        },
+        {
+          "path": "frontend/src/components/Game3DScene.tsx",
+          "operation": "modify",
+          "description": "Review how the Game3DScene component consumes the keyboard state from useGameControls hook. Verify that the pressed key states are correctly read and translated into player movement velocities in the useFrame loop. Ensure that movement calculations properly map keyboard input to 3D space coordinates (forward/backward for W/S or ArrowUp/ArrowDown, left/right for A/D or ArrowLeft/ArrowRight). Check that the player sphere's position is updated every frame based on active key presses. Verify that movement stops when no keys are pressed. Ensure the keyboard controls remain active during all gameplay states (not just menu)."
+        },
+        {
+          "path": "frontend/src/pages/GamePage.tsx",
+          "operation": "modify",
+          "description": "Verify that keyboard event listeners are not blocked or interfered with by game state transitions (menu/playing/paused/gameover). Ensure that the useGameControls hook is called at the appropriate level and that its state is passed down to Game3DScene when the game state is 'playing'. Check for any event.stopPropagation() or focus-related issues that might prevent keyboard events from reaching the control hook. Ensure keyboard controls are disabled appropriately during pause/menu states but re-enable immediately when returning to playing state."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 5,
+  "summary": "Creating a super gaming app",
+  "architectural_notes": [],
+  "known_issues": [
+    "Direction buttons (keyboard/mouse controls) are not functioning properly"
+  ],
+  "isFixRequest": true,
+  "existing_features": [
+    {
+      "id": "feature-create-a-3d-game-environment-using-three-js-and-react-three-fiber-with-interactive-gameplay-mechanics",
+      "title": "Create a 3D game environment using Three.js and React Three Fiber with interactive gameplay mechanics",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-game-controls-interface-with-keyboard-mouse-input-handling-for-player-actions",
+      "title": "Create game controls interface with keyboard/mouse input handling for player actions",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-design-a-vibrant-energetic-visual-theme-with-bold-neon-colors-cyan-magenta-electric-yellow-futuristic-typography-and-dynamic-gradient-backgrounds-that-evoke-arcade-and-cyberpunk-aesthetics",
+      "title": "Design a vibrant, energetic visual theme with bold neon colors (cyan, magenta, electric yellow), futuristic typography, and dynamic gradient backgrounds that evoke arcade and cyberpunk aesthetics",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-leaderboard-functionality-to-display-top-scores-from-all-players",
+      "title": "Implement leaderboard functionality to display top scores from all players",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-debug-and-fix-the-keyboard-direction-controls-wasd-and-arrow-keys-to-properly-control-player-movement-in-the-3d-game-scene",
+      "title": "Debug and fix the keyboard direction controls (WASD and arrow keys) to properly control player movement in the 3D game scene",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-2",
+      "summary": "Implement game state management to track player progress, score, and game status (playing, paused, game over)",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "status": "pending"
+    }
+  ],
+  "projectName": "super gaming app",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}
